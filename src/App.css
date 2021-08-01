@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+ul {
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@-webkit-keyframes FADE {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes FADE {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes FADE {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes FADE {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#fadeIn {
+  -webkit-animation: FADE .5s; /* Safari 4+ */
+  -moz-animation:    FADE .5s; /* Fx 5+ */
+  -o-animation:      FADE .5s; /* Opera 12+ */
+  animation:         FADE .5s; /* IE 10+, Fx 29+ */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+@keyframes FADE_OUT {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#fadeOut {
+  -webkit-animation: FADE_OUT .75s; /* Safari 4+ */
+  -moz-animation:    FADE_OUT .75s; /* Fx 5+ */
+  -o-animation:      FADE_OUT .75s; /* Opera 12+ */
+  animation:         FADE_OUT .75s; /* IE 10+, Fx 29+ */
 }
